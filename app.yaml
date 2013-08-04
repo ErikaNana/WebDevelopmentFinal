@@ -1,0 +1,15 @@
+application: enana-cs262
+version: 1  #adjust this before uploading new versions.  App Engine will retain previous versions and roll back using the admin console
+runtime: python27
+api_version: 1
+threadsafe: true
+
+libraries:
+- name: jinja2
+  version: latest
+
+handlers:
+- url: /stylesheet
+  static_dir: stylesheet
+- url: /.*  #every request to a URL whose path matches the regular expression /.* (all URLS) should be handled by teh application object in the helloworld module
+  script: wiki.application

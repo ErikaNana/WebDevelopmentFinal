@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/stylesheet/main.css" />
+
+  <title>Final Project Wiki</title>
+</head>
+
+<body>
+  <div class="login-area">
+    {% if user %}
+      {% if j_editlink%}
+        <a class = "login-link" href = "{{j_editlink}}">edit</a> |
+        <a class = "login-link" href = "{{j_historylink}}">history</a> |
+      {% endif %}
+      {{user}} (<a class="login-link" href="/logout">logout</a>)
+    {% else %}
+
+      <a class = "login-link" href = "{{j_historylink}}">history</a> |
+      <a class="login-link" href="/login">login</a>
+      |
+      <a class="login-link" href="/signup">signup</a>
+    {% endif %}
+  </div>
+  <br>
+  <div id="content">
+  {% block content %}
+  {% endblock %}
+  </div>
+</body>
+
+</html>
+

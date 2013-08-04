@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table class = "table">
+    {% for version in j_entries %}
+    <tr>
+        <td>{{version.created.strftime("%a, %d %b %Y %H:%M:%S")}}</td>
+        <td>{{version.content}}</td>
+        <td><a class = "login-link" href = "{{version.subject}}?v={{version.version}}">view</a> </td>
+        <td>version:  {{version.version}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+

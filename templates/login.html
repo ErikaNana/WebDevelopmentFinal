@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+  <link type="text/css" rel="stylesheet" href="/stylesheet/main.css" />
+    <title> Final Project Wiki </title>
+    </head>
+    <style type = "text/css">
+        body{
+            width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+            font-family: Helvetica, Arial,sans-seriff;
+        }
+    </style>
+</body>
+  <a href="/" class="main-title">
+    The Wiki
+  </a>
+<form method = "post">
+    <h2>Login</h2>
+    <table>
+        <tr>
+            <td> Username </td>
+            <td> <input type = "text" name = "username" value = "{{j_username}}"></td>
+            <td><font color = "red"> {{j_error_username}} </font></td>
+        </tr>
+        <tr>
+            <td> Password </td>
+            <td> <input type = "password" name = "password" value = "{{j_password}}"></td>
+            <td><font color= "red"> {{j_error_password}} </font></td>
+       </tr>
+    </table>
+       <br>
+       <input type = "submit" value = "Submit">
+
+</form>
+   </body>
+</html>
